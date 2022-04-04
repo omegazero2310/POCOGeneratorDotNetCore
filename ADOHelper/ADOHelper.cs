@@ -271,6 +271,11 @@ namespace ADOHelper
                                 result[i + 1] = string.Format("{0}Public Property {1} as Long '(bigint{2})", LinePrefix, Columns[i].ColumnName, AllowNull);
                                 break;
                             }
+                        case "smallint":
+                            {
+                                result[i + 1] = string.Format("{0}Public Property {1} as Int16 '(Int16{2})", LinePrefix, Columns[i].ColumnName, AllowNull);
+                                break;
+                            }
 
                         case "binary":
                             {
@@ -499,6 +504,11 @@ namespace ADOHelper
                         case "bigint":
                             {
                                 result[i + 1] = string.Format("{0}public long {1} {{ get; set; }} //(bigint{2})", LinePrefix, Columns[i].ColumnName, AllowNull);
+                                break;
+                            }
+                        case "smallint":
+                            {
+                                result[i + 1] = string.Format("{0}public Int16 {1} {{ get; set; }} //(smallint{2})", LinePrefix, Columns[i].ColumnName, AllowNull);
                                 break;
                             }
 
