@@ -772,7 +772,7 @@ namespace ADOHelper
                     }
                 }
 
-                srdrSP = scmdSP.ExecuteReader(CommandBehavior.SchemaOnly);
+                srdrSP = scmdSP.ExecuteReader(CommandBehavior.SingleResult);
                 dtSchema = srdrSP.GetSchemaTable();
             }
             catch (Exception ex)
